@@ -1,0 +1,196 @@
+<div id="wrapper">
+  <section class="main">
+    <div style="text-align:center">
+      <h4>
+          {{ pageTitle }}
+      </h4></div>
+    <div class="library-container" id = "library-container">
+      <div class="row" id="header">
+        <div class="col s2 left-align column-header" >
+          <p>Title</p>
+        </div>
+        <div class="col s2 left-align column-header">
+          <p>Artist</p>
+        </div>
+        <div class="col s2 left-align column-header">
+          <p>Album</p>
+        </div>
+        <div class="col s2 left-align column-header">
+          <p>Year</p>
+        </div>
+        <div class="col s2 left-align column-header">
+          <p>Genre</p>
+        </div>
+        <div class="col s2 left-align column-header">
+          <p>Length</p>
+        </div>
+      </div>
+      <div class="row even" id="row1">
+        <div class="col s2 left-align" >
+          <p>{{ titles[0] }} </p>
+        </div>
+        <div class="col s2 left-align">
+          <p>{{ artists[0] }} </p>
+        </div>
+        <div class="col s2 left-align">
+            <p>{{ albums[0] }} </p>
+        </div>
+        <div class="col s2 left-align">
+            <p>{{ years[0] }} </p>
+        </div>
+        <div class="col s2 left-align">
+            <p>{{ genres[0] }} </p>
+        </div>
+        <div class="col s2 left-align">
+            <p>{{ lengths[0] }} </p>
+        </div>
+      </div>
+      <div class="row odd" id="row2">
+        <div class="col s2 left-align" >
+          <p>{{ titles[1] }} </p>
+        </div>
+        <div class="col s2 left-align">
+          <p>{{ artists[0] }} </p>
+        </div>
+        <div class="col s2 left-align">
+            <p>{{ albums[1] }} </p>
+        </div>
+        <div class="col s2 left-align">
+            <p>{{ years[1] }} </p>
+        </div>
+        <div class="col s2 left-align">
+            <p>{{ genres[1] }} </p>
+        </div>
+        <div class="col s2 left-align">
+            <p>{{ lengths[1] }} </p>
+        </div>
+      </div>
+      <div class="row even" id="row3">
+        <div class="col s2 left-align" >
+          <p>{{ titles[2] }} </p>
+        </div>
+        <div class="col s2 left-align">
+          <p>{{ artists[0] }} </p>
+        </div>
+        <div class="col s2 left-align">
+            <p>{{ albums[2] }} </p>
+        </div>
+        <div class="col s2 left-align">
+            <p>{{ years[2] }} </p>
+        </div>
+        <div class="col s2 left-align">
+            <p>{{ genres[2] }} </p>
+        </div>
+        <div class="col s2 left-align">
+            <p>{{ lengths[2] }} </p>
+        </div>
+      </div>
+      <div class="row odd" id="row4">
+        <div class="col s2 left-align" >
+          <p>{{ titles[3] }} </p>
+        </div>
+        <div class="col s2 left-align">
+          <p>{{ artists[0] }} </p>
+        </div>
+        <div class="col s2 left-align">
+            <p>{{ albums[3] }} </p>
+        </div>
+        <div class="col s2 left-align">
+            <p>{{ years[3] }} </p>
+        </div>
+        <div class="col s2 left-align">
+            <p>{{ genres[3] }} </p>
+        </div>
+        <div class="col s2 left-align">
+            <p>{{ lengths[3] }} </p>
+        </div>
+      </div>
+      <div class="row even" id="row5">
+        <div class="col s2 left-aligns" >
+          <p>{{ titles[4] }} </p>
+        </div>
+        <div class="col s2 left-aligns">
+          <p>{{ artists[0] }} </p>
+        </div>
+        <div class="col s2 left-aligns">
+            <p>{{ albums[4] }} </p>
+        </div>
+        <div class="col s2 left-aligns">
+            <p>{{ years[4] }} </p>
+        </div>
+        <div class="col s2 left-aligns">
+            <p>{{ genres[4] }} </p>
+        </div>
+        <div class="col s2 left-aligns">
+            <p>{{ lengths[4] }} </p>
+        </div>
+      </div>
+      <div class="row odd" id="row6">
+        <div class="col s2 left-aligns" >
+          <p>{{ titles[5] }} </p>
+        </div>
+        <div class="col s2 left-aligns">
+          <p>{{ artists[0] }} </p>
+        </div>
+        <div class="col s2 left-aligns">
+            <p>{{ albums[5] }} </p>
+        </div>
+        <div class="col s2 left-aligns">
+            <p>{{ years[5] }} </p>
+        </div>
+        <div class="col s2 left-aligns">
+            <p>{{ genres[5] }} </p>
+        </div>
+        <div class="col s2 left-aligns">
+            <p>{{ lengths[5] }} </p>
+        </div>
+      </div>
+      <div class="row even" id="row7">
+        <div class="col s2 left-aligns" >
+          <p>{{ titles[6] }} </p>
+        </div>
+        <div class="col s2 left-aligns">
+          <p>{{ artists[0] }} </p>
+        </div>
+        <div class="col s2 left-aligns">
+            <p>{{ albums[6] }} </p>
+        </div>
+        <div class="col s2 left-aligns">
+            <p>{{ years[6] }} </p>
+        </div>
+        <div class="col s2 left-aligns">
+            <p>{{ genres[6] }} </p>
+        </div>
+        <div class="col s2 left-aligns">
+            <p>{{ lengths[6] }} </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer id="footer" class="app-footer">
+      <div class="container-fluid">
+        <button (click)="mute()" display="inline">
+            <img src="assets/controls/mute.png">
+        </button>
+        <button (click)="volumeDown()" display="inline">
+            <img src="assets/controls/volume-down.png">
+        </button>
+        <button (click)="volumeUp()" display="inline">
+            <img src="assets/controls/volume-up.png">
+        </button>
+        <button (click)="skipBack()" display="inline">
+            <img src="assets/controls/skip-back.png">
+        </button>
+        <button (click)="playSong()" display="inline">
+            <img id="play" src="assets/controls/play.png">
+        </button>
+        <button (click)="skipForward()" display="inline">
+            <img src="assets/controls/skip-forward.png">
+        </button>
+        <button (click)="repeat()" display="inline">
+            <img src="assets/controls/repeat.png">
+        </button>
+      </div>
+    </footer>
+  </div>
+

@@ -1,0 +1,14 @@
+.navbar {
+    background-color: #4fc3f7;
+    color: black;
+}
+.navbar.navlist li a{
+    color: black;
+}
+.ul {
+    color: blue;
+}
+.li {
+    color: blue;
+    
+}

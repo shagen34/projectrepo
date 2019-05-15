@@ -1,0 +1,20 @@
+#header{
+    color: white;
+    background-color: black;
+}
+.column-header{
+    border-style: solid; 
+    border-color: black black white white
+}
+.row {
+    margin: 0;
+}
+.odd {
+    background-color: #fafafa;
+}
+.even {
+    background-color:  #bdbdbd;
+}
+.pause {
+    display: none;
+}
