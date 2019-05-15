@@ -1,0 +1,10 @@
+int func(int a, float b, bool c)
+{
+    return 0;
+}
+int main()
+{
+    int x;
+    x = x + func;
+    return 0;
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Minesweeper</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="main.js"></script>
+    <style>
+        .tile{
+            width: 20px;
+            height: 20px;
+            display: block;
+            float: left;
+            background-color: #616161;
+            border: 1px solid black;
+        }
+        .openTile{
+            width: 20px;
+            height: 20px;
+            display: block;
+            float: left;
+            background-color: #bdbdbd;
+            border: 1px solid black;
+        }
+        .mine{
+            width: 20px;
+            height: 20px;
+            display: block;
+            float: left;
+            background-color: #616161;
+            border: 1px solid black;
+        }
+        .mineExplode{
+            width: 20px;
+            height: 20px;
+            display: block;
+            float: left;
+            background-color: red;
+            border: 1px solid black;
+        }
+        .linebr{
+            clear: left;
+        }
+        .no-clicks {
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="center-align">Minesweeper with Vanilla JS</h1>
+
+    <div id="diffSelect" class="container">
+        <h5 class="center-align">Choose a board size: </h5>
+        <div class="row">
+            <div class = "col s12 center-align">
+                <a id="by10btn" class="wave-effect wave=light btn" onclick="start(10, 10)">10x10 with 10 mines</a>
+            </div>
+            <div class = "col s12 center-align">
+                <a id="by25btn" class="wave-effect wave=light btn" onclick="start(25, 30)">25x25 with 30 mines</a>
+            </div>
+            <div class="col s12 center-align">
+                <a id="by50btn" class="wave-effect wave=light btn" onclick="start(40, 50)">40x40 with 50 mines</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="canvas" class="container">
+        <div class="row" id="mainCanvas">
+            <div class="col s12 center-align" id="gameTitle"></div>
+            <div class="col s12 center-align" id="board"></div>
+            <div class="col s12 center-align" id="reset"></div>
+        </div>
+    </div>
+
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+%right  ASSIGN
+%left   OR 
+%left   AND 
+%left   EQ      NE  
+%left   LE      LT      GE      GT 
+%left   PLUS    MINUS  
+%left   MUL     DIV     MOD 
+%right  NOT
+
+
+program        ->  decl_list
+decl_list      ->  decl_list  decl  |  eps
+decl           ->  var_decl  |  fun_decl
+var_decl       ->  type_spec  IDENT  SEMI
+type_spec      ->  BOOL  |  INT  |  FLOAT
+                |  RECORD  LBRACE  local_decls  RBRACE                          // to support record (simpler version of structure)
+                |  type_spec  LBRACKET  RBRACKET                                // to support array
+fun_decl       ->  type_spec  IDENT  LPAREN  params  RPAREN  LBRACE  local_decls  stmt_list  RBRACE
+params         ->  param_list  |  eps
+param_list     ->  param_list  COMMA  param  |  param
+param          ->  type_spec  IDENT
+stmt_list      ->  stmt_list  stmt  |  eps
+stmt           ->  expr_stmt  |  compound_stmt  |  if_stmt  |  while_stmt  |  return_stmt  |  break_stmt  |  continue_stmt  |  print_stmt  |  SEMI
+expr_stmt      ->  IDENT  ASSIGN  expr_stmt  |  expr  SEMI
+                |  IDENT  LBRACKET  expr  RBRACKET  ASSIGN  expr_stmt           // to support array
+                |  IDENT  DOT  IDENT  ASSIGN  expr_stmt                         // to support record
+while_stmt     ->  WHILE  LPAREN  expr  RPAREN  stmt
+compound_stmt  ->  LBRACE  local_decls  stmt_list  RBRACE
+local_decls    ->  local_decls  local_decl  |  eps
+local_decl     ->  type_spec  IDENT  SEMI
+if_stmt        ->  IF  LPAREN  expr  RPAREN  stmt  ELSE  stmt
+return_stmt    ->  RETURN  expr  SEMI
+break_stmt     ->  BREAK  SEMI
+continue_stmt  ->  CONTINUE  SEMI
+print_stmt     ->  PRINT  expr  SEMI
+arg_list       ->  arg_list  COMMA  expr  |  expr
+args           ->  arg_list  |  eps
+expr           ->  expr  OR  expr  |  expr  AND  expr  |  NOT  expr
+                |  expr  EQ  expr  |  expr  NE  expr  |  expr  LE  expr  |  expr  LT  expr  |  expr  GE  expr  |  expr  GT  expr
+                |  expr  PLUS  expr  |  expr  MINUS  expr  |  expr  MUL  expr  |  expr  DIV  expr
+                |  LPAREN  expr  RPAREN  |  IDENT  |  BOOL_LIT  |  INT_LIT  |  FLOAT_LIT
+                |  IDENT  LPAREN  args  RPAREN                                  // to support function call
+                |  IDENT  LBRACKET  expr  RBRACKET  |  IDENT  DOT  SIZE         // to support array
+                |  NEW  type_spec  LBRACKET  expr  RBRACKET                     // to support array
+                |  IDENT  DOT  IDENT                                            // to support record

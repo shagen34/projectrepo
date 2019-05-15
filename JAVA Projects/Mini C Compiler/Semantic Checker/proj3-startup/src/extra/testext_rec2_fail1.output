@@ -1,0 +1,2 @@
+Error at line 21 : "record {int a, int x, int y}" value is tried to assign to "record {int x, int y}" variable pt1.point.
+Error: there exists error(s).

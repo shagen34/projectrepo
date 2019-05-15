@@ -1,0 +1,2 @@
+Error at function func() defined in line 1 : at least one return statement must be used to return "int" value.
+Error: there exists error(s).

@@ -1,0 +1,21 @@
+<MAIN :1><( :1><) :1>
+<{ :2>
+    << add za into symbol table at 0 :3 >><ID, 0 :3> <= :3> <INT_VALUE, 1 :3><; :3>
+    <ID, 0 :4> <= :4> <ID, 0 :4> <+ :4> <INT_VALUE, 2 :4><; :4>
+    <ID, 0 :5> <= :5>  <INT_VALUE, 3 :5> <+ :5> <ID, 0 :5><; :5>
+    << add zb into symbol table at 1 :6 >><ID, 1 :6> <= :6> <ID, 0 :6> <+ :6>  <INT_VALUE, 4 :6><; :6>
+    << add zc into symbol table at 2 :7 >><ID, 2 :7> <= :7> <ID, 0 :7> <+ :7> <ID, 1 :7><; :7>
+    << add zd into symbol table at 3 :8 >><ID, 3 :8> <= :8> <ID, 1 :8> <+ :8> <ID, 2 :8><; :8>
+    << add ze into symbol table at 4 :9 >><ID, 4 :9> <= :9> <ID, 2 :9> <+ :9> <ID, 3 :9><; :9>
+    << add zf into symbol table at 5 :10 >><ID, 5 :10> <= :10> <ID, 3 :10> <+ :10> <ID, 4 :10><; :10>
+    << add zg into symbol table at 6 :11 >><ID, 6 :11> <= :11> <ID, 4 :11> <+ :11> <ID, 5 :11><; :11>
+    << add zh into symbol table at 7 :12 >><ID, 7 :12> <= :12> <ID, 5 :12> <+ :12> <ID, 6 :12><; :12>
+    << add zi into symbol table at 8 :13 >><ID, 8 :13> <= :13> <ID, 6 :13> <+ :13> <ID, 7 :13><; :13>
+    << add zj into symbol table at 9 :14 >><ID, 9 :14> <= :14> <ID, 7 :14> <+ :14> <ID, 8 :14><; :14>
+    << add zk into symbol table at 10 :15 >><ID, 10 :15> <= :15> <ID, 8 :15> <+ :15> <ID, 9 :15><; :15>
+    << add zl into symbol table at 11 :16 >><ID, 11 :16> <= :16> <ID, 9 :16> <+ :16> <ID, 10 :16><; :16>
+    << add zm into symbol table at 12 :17 >><ID, 12 :17> <= :17> <ID, 10 :17> <+ :17> <ID, 11 :17><; :17>
+    << add zn into symbol table at 13 :18 >><ID, 13 :18> <= :18> <ID, 11 :18> <+ :18> <ID, 12 :18><; :18>
+    <FLOAT_VALUE, 3.141592 :19> <BOOL :19><, :19> <INT, :19><, :19> <FLOAT, :19><, :19> <RECORD :19><, :19> <SIZE :19><, :19> <NEW :19><, :19> <WHILE :19><, :19> <IF :19><, :19> <ELSE :19><, :19> <RETURN :19><, :19> <BREAK :19><, :19> <CONTINUE :19><, :19> <AND :19><, :19> <OR :19><, :19> <NOT :19><, :19> <BOOL_VALUE, true :19><, :19> <BOOL_VALUE, false :19> <== :19> <!= :19> << :19> <> :19> <<= :19> <>= :19> <- :19> <* :19> </ :19>  << add this into symbol table at 14 :19 >><ID, 14 :19> << add line into symbol table at 15 :19 >><ID, 15 :19> << add will into symbol table at 16 :19 >><ID, 16 :19> << add be into symbol table at 17 :19 >><ID, 17 :19> << add ignored into symbol table at 18 :19 >><ID, 18 :19> <; :19> // test 1 2 3
+    <PRINT :20> <ID, 13 :20><; :20>
+<} :21>

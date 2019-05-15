@@ -1,0 +1,23 @@
+int main(int a)
+{
+    record
+    {
+        int x;
+        int y;
+        record
+        {
+            int x;
+            int y;
+        } point;
+    } pt1;
+
+    record
+    {
+        int y;
+        int x;
+    } pt2;
+
+    pt1.point = pt2;
+
+    return 0;
+}

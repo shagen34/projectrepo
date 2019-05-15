@@ -1,0 +1,2 @@
+Error at line 15 : while does not use "int" value to check condition. Use bool value in while loop.
+Error: there exists error(s).

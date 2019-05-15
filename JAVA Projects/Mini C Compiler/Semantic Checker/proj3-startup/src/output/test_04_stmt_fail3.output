@@ -1,0 +1,2 @@
+Error at line 20 : if does not use "float" value to check condition. Use bool value in if statement.
+Error: there exists error(s).

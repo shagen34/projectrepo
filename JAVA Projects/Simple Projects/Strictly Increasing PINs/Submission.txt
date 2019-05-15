@@ -1,0 +1,13 @@
+Shane Hagen
+
+1) Hackerrank ID: shagen34
+
+2) For the first problem I used the generate string code as reference. I attempted to use constraints @ line 42 based on the PIN prefix being passed to short circuit 
+some calls but I'm not sure if they actually help. I was having problems passing a null StringBuilder so I used the if statement which is why I use the special case 
+for null PIN prefixes. Runtime complexity depends most on the base chosen(n). = O(2^n) 
+
+For the second problem I used the code for the subset sum as reference. I used a hashtable to store the sums as keys and increment the value of at the key if the sum is
+created again. Then traverses the hashtable to find the key with the highest value. Runtime complexity depends the most on the size of the input array(n). = O(2^n) 
+
+For the last problem I used the non-recursive subset sum as reference. Using the same data types as the previous problem to store the sums. 
+Runtime complexity also depends most on the size of the input array(n). = O(2^n)

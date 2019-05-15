@@ -1,0 +1,31 @@
+float total(float[] values, float weight)
+{
+    int i;
+    float total;
+
+    total = 0.0;
+    while(i < values.size)
+    {
+        float local;
+        local = values[i] * weight;
+        total = total + local;
+    }
+    return total;
+}
+
+int main()
+{
+    float[] vals;
+    float tot;
+
+    vals = new float[5];
+    vals[0] = 1.123;
+    vals[1] = 2.123;
+    vals[2] = 3.123;
+    vals[3] = 4.123;
+    vals[4] = 5.123;
+    tot = total(vals, 0.235);
+    print tot;
+
+    return 0;
+}

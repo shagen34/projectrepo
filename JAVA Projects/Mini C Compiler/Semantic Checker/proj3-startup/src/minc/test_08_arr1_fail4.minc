@@ -1,0 +1,11 @@
+int main()
+{
+    int[] a;
+    int b;
+    int c;
+    a = new int[10];
+    a[0] = 10;
+    b = a[0];
+    c = b.size;
+    return 0;
+}

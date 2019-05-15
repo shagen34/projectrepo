@@ -1,0 +1,2 @@
+Error at line 17 : "record {int x, int y}" value is tried to assign to "int" variable a.
+Error: there exists error(s).

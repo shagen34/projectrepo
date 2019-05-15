@@ -1,0 +1,126 @@
+Shane Hagen
+CMPSC470
+Syntax Checker initialization 
+
+Remove left recursion from grammar
+
+2. decl_list -> decl_list fun_decl | epsilon ==>
+decl_list -> decl_list'
+decl_list' -> fun_decl decl_list' | epsilon
+
+6. param_list -> param_list "," param | param ==>
+param_list -> param param_list' 
+param_list' -> "," param param_list' | epsilon
+
+8. stmt_list -> stmt_list stmt | epsilon ==>
+stmt_list -> stmt_list'
+stmt_list' -> stmt stmt_list'
+
+13. local_decls -> local_decls local_decl | epsilon ==>
+local_decls -> local_decls'
+local_decls' -> local_decl local_decls' | epsilon
+
+16. arg_list -> arg_list "," expr | expr ==>
+arg_list -> expr arg_list'
+arg_list' -> "," expr arg_list' | epsilon
+
+18. expr -> expr "+" term | term ==>
+expr -> term expr'
+expr' -> "+" term expr' | epsilon
+
+19. term -> term "==" factor | term "*" factor | factor ==>
+term -> factor term'
+term' -> "==" factor term' | "*" factor term' | epsilon
+
+New grammar:
+
+1. program 	-> decl_list
+2. decl_list 	-> decl_list'
+   decl_list' 	-> fun_decl decl_list' | epsilon
+3. type_spec 	-> "int"
+4. fun_decl 	-> type_spec IDENT "(" params ")" compound_stmt
+5. params 	-> param_list | epsilon
+6. param_list 	-> param param_list' 
+   param_list' 	-> "," param param_list' | epsilon
+7. param 	-> type_spec IDENT
+8. stmt_list 	-> stmt_list'
+   stmt_list' 	-> stmt stmt_list' | epsilon
+9. stmt 	-> expr_stmt | compound_stmt | if_stmt | while_stmt
+10. expr_stmt 	-> IDENT "=" expr ";" | ";"
+11. while_stmt 	-> "while" "(" expr ")" stmt
+12.compound_stmt-> "{" local_decls stmt_list "}"
+13. local_decls -> local_decls'
+   local_decls' -> local_decl local_decls' | epsilon
+14. local_decl 	-> type_spec IDENT ";"
+15. if_stmt 	-> "if" "(" expr ")" stmt "else" stmt
+16. arg_list 	-> expr arg_list'
+    arg_list' 	-> "," expr arg_list' | epsilon
+17. args 	-> expr arg_list' | epsilon
+18. expr 	-> term expr'
+    expr' 	-> "+" term expr' | epsilon
+19. term 	-> factor term'
+    term' 	-> "==" factor term' | "*" factor term' | epsilon
+20. factor 	-> IDENT factor' | "(" expr ")" | INT_LIT
+    factor'	-> "(" args ")" | epsilon
+
+
+Determine First() and Follow()
+
+1. First(program) =  {"epsilon", "int"}
+2. First (decl_list) = First(decl_list') = {"epsilon", "int"}
+   First (decl_list') = {"epsilon", "int"}
+3. First(type_spec) = {"int"}
+4. First(fun_decl) = first(type_spec) = {"int"}
+5. First(params) = {"epsilon", "int"}
+6. First(param_list) = First(param) = {"int"}
+   First(param_list') = { "," , "epsilon"}
+   First(param) = {"int"}
+7. First(stmt_list) = First(stmt_list')U {epsilon} =  {  epsilon, "IDENT", "{", "if", "while", ";" }
+   First(stmt_list') = { "IDENT", "{", "if", "while", ";" }
+8. First(stmt) = {"IDENT", "{", "if", "while", ";" }
+10. First(expr_stmt) = {"IDENT", ";"}
+11. First(while_stmt) = {"while"}
+12. First(compound_stmt) = {"{"}
+13. First(local_decls) = First(local_decls') = First(local_decl) U {"epsilon"} = { "int", "epsilon" }
+14. First(local_decl) = {"int"}
+15. First(if_stmt) = { "if" }
+16. First(arg_list) = First(expr) = First(term) = First(factor) = { "(", "IDENT", "INT LIT"}
+    First(arg_list') = {",", "epsilon"}
+17. First(args) = { "epsilon", "(", "IDENT", "INT LIT" }
+18. First(expr) = {"(", "IDENT", "INT LIT" }
+    First(expr') = {"+", "epsilon"}
+19. First(term) = { "(", "IDENT", "INT LIT" }
+    First(term') = { "==", "*", "epsilon" }
+    First(factor) = { "(", "IDENT", "INT LIT" }
+    First(factor') = { "(", epsilon }
+
+* indicates First(x) contains epsilon
+	
+1. *Follow(program) = {$}
+2. *Follow(decl_list) = { "$" }
+   *Follow(decl_list') = { "$" }
+   Follow(fun_decl) = { "$" }
+   Follow(compound_stmt) = {"else", "$" } // MAYBE ELSE
+3. Follow(type_spec) = { "IDENT" } // MAYBE
+4. Follow(fun_decl) = { "else", "$"} // MAYBE ELSE
+5. *Follow(params) = { ")" }
+6. *Follow(param_list) = { "$" } // MAYBE
+   *Follow(param_list') = { "$" } // MAYBE
+7. Follow(param) = { ",", ")" } 
+8. *Follow(stmt_list) = { "}" }
+9. Follow(stmt) = { "else", "$" } // MAYBE
+10. Follow(expr_stmt) = { "$" }
+11. Follow(while_stmt) = Follow(stmt) = { "else", "$" }
+12. Follow(compound_stmt) = { "$" }
+13. *Follow(local_decls) = First(stmt_list) = {"IDENT", "{", "if", "while", ";", "}" }
+    *Follow(local_decls') = { "$" }
+14. Follow(local_decl) = Follow(local_decls') = { "$" } // Maybe
+16. Follow(arg_list) = { "$" } // MAYBE
+    *Follow(arg_list') = { "$" } // MAYBE
+17. *Follow(args) = { ")", "$" } 
+18. Follow(expr) = { ")", ";", "," }
+    *Follow(expr') = { "$", 
+19. Follow(term) = Follow(factor) = {"==", "*", "$" } 
+    *Follow(term') = { "==", "*", ";", "+"}
+20. Follow(factor) = { "==", "*"
+    *Follow(factor') = { ")", "+", "==", "*", ";", ",", "$" }

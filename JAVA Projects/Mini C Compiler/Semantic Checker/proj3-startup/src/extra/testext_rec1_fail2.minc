@@ -1,0 +1,24 @@
+int main(int a)
+{
+    record
+    {
+        int x;
+        int y;
+    } pt1;
+
+    record
+    {
+        int y;
+        int x;
+    } pt2;
+
+    int b;
+
+    pt1 = pt2;
+    a = pt1.x;
+    b = pt1.z;
+    pt2.x = a;
+    pt2.y = b;
+
+    return 0;
+}

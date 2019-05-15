@@ -1,0 +1,31 @@
+int main()
+{
+    int i;
+    int a;
+    int b;
+    float c;
+    float d;
+    bool e;
+    bool f;
+
+    a = b = 1;
+    c = d = 2.3;
+    e = f = not true;
+
+    while(i+1)
+    {
+        int a;
+        a = a + 1;
+    }
+    if(1 == 2)
+    {
+        int a;
+        a = 1;
+    }
+    else
+    {
+        int a;
+        a = 1;
+    }
+    return 1+2;
+}

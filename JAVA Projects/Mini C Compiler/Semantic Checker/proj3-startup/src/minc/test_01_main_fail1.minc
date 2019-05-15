@@ -1,0 +1,4 @@
+int nomain()
+{
+    return 0;
+}

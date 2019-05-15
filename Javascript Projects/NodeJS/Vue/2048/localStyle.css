@@ -1,0 +1,28 @@
+#boardContainer {
+    background-color: #78909c;
+    width: 360px;
+    height: 343px;
+    margin-bottom: 15px;
+}
+
+.tile {
+    display: inline-table;
+    vertical-align: top;
+    margin: 5px;
+    margin-bottom: 5px;
+    width: 75px;
+    height: 75px;
+    background-color: #bdbdbd
+}
+.scoreTile {
+    display: inline-table;
+    margin: 5px;
+    margin-bottom: 5px;
+    width: 75px;
+    height: 75px;
+    background-color: #bdbdbd;
+    font-size: 2em;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 75px;
+}

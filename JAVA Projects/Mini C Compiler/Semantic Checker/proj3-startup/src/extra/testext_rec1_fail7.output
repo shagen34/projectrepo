@@ -1,0 +1,2 @@
+Error at line 18 : "record {float a, int x, int y}" value is tried to assign to "record {int x, int y}" variable pt1.
+Error: there exists error(s).

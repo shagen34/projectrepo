@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>User Management</title>
+    <script
+        src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <style>
+        body {
+            background-color: #e3f2fd;
+        }
+        #userCanvas {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h2 class="center-align">User Management Problem</h2>
+    <div class="center-align">
+        <span class="flow-text">Here we will generate random users,
+            you can use the text box to filter users:
+        </span>
+        <div class="row">
+            <div class="col s4"></div>
+                <div class="col s3 center-align" style="margin-left: 50px">
+                    <input placeholder="Filter Users Here" id="filter" type="text" onkeyup="filterUsers()">
+                </div>
+            </div>
+        </div>
+        <div class="row center-align" id="genNotify">
+            <span class="flow-text">Generating user profiles...</span>
+        </div>
+    </div>
+    <div class="center-align">
+        <div class="row" id="userCanvas"></div>
+    </div>
+    
+</body>
+</html>

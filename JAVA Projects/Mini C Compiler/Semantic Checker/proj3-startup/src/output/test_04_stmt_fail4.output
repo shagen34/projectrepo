@@ -1,0 +1,2 @@
+Error at line 30 : return type of main() is "int", not "float".
+Error: there exists error(s).
