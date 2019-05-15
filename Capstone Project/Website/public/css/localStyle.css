@@ -1,0 +1,91 @@
+#banner {
+  text-align: center;
+  margin:auto;
+}
+
+#so {
+    background-color: #616161;
+}
+#result {
+    height: 180px;
+}
+#propertyList {
+    display: none;
+}
+#so:hover {
+    color: black;
+    background-color: #ff5722;
+}
+#search, #review, #claims {
+
+}
+#search:hover, #review:hover, #claims:hover {
+
+}
+#applicationBtn {
+    color: blue;
+}
+
+#edit {
+    margin: 0;
+}
+#modalBtn {
+    margin: 10;
+    float: right;
+}
+#searchCriteria{
+    color:black;
+}
+
+#contentPane{
+    display: none;
+    margin:auto;
+    height: auto;
+    text-align: left;
+    background: #e0e0e0;
+    width:80%;
+    
+    max-height:80%;
+
+}
+#openApplicationBtn, #reOpenApplicationBtn, #rejectApplicationBtn{
+    justify-content: center;
+    margin-bottom: 10px;
+}
+#searchForm {
+    display: none;
+}
+#reviewForm{
+    display: none;
+}
+#claimForm{
+    display: none;
+}
+#claims-map {
+    display: none;
+}
+#map-canvas, #pano, #claims-map {
+    margin: auto;
+    width: 80%;
+    height: 600px;
+}
+.custom {
+    opacity: 0;
+}
+.carousel .carousel-item{
+    width:100%;
+  }
+#clientTabs, #claimTabs {
+    display: none;
+}
+.divider{
+    background-color: black;
+}
+.unselectable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}

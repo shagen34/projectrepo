@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Wizard Insurance</title>
+    <link rel="stylesheet" href ="css/stylesheet.css">
+
+
+
+    <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase-firestore.js"></script>
+    <script src="js/preload-scripts/materialize.js"></script>
+    <script src="js/db/firebaseIntializer.js"></script>
+    <script src="js/db/firebaseFunctions.js"></script>
+    <!--<script src="https://www.gstatic.com/firebasejs/5.8.2/firebase-messaging.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase-functions.js"></script>-->
+
+</head>
+<body style="background: #abd7ff">
+
+
+<div id="banner"><img src="mybanner3.jpg" width ="500px" height= "200px"></img></div>
+
+
+<nav class ="indigo" >
+        <a href="#"  class ="brand-logo"></a>
+</nav>
+
+<div class="log-form">
+
+  <h2 style="text-align:center" >Login to your account</h2>
+  <ul id = "nav-mobile" class = "right hide-on-med-and-down">
+    <input type="email"  id = "email" title="username" placeholder="username" />
+    <input type="password" id = "pass" title="username" placeholder="password" />
+    <button id = "login" onclick="login()" class="btn">Login</button>
+
+  </ul>
+</div>
+
+
+
+
+</body>
+</html>

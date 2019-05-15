@@ -1,0 +1,154 @@
+<resources>
+    <string name="edit_car">Edit</string>
+    <string name="add_car">Add a Car</string>
+    <string name="remove_car">Delete</string>
+    <string name="app_name">Wizard Insurance</string>
+    <string name="login">Login</string>
+    <string name="password">Password</string>
+    <string name="username">Username</string>
+    <string name="wizard_insurance">Wizard Insurance</string>
+    <string name="title_activity_home_page">Home</string>
+    <string name="name_field">Name:</string>
+    <string name="date_of_birth_field">Date of Birth:</string>
+    <string name="name_hint">Name</string>
+    <string name="gender_field">Gender:</string>
+    <string name="marital_status_field">Marital Status:</string>
+    <string name="ssn_field">SSN:</string>
+    <string name="ssn_hint">Social Security Number</string>
+    <string name="drivers_license_field">Driver\'s License #:</string>
+    <string name="driverlicense_hint">Driver\'s License Number</string>
+    <string name="licensed_state_field">Licensed State:</string>
+    <string name="driver_type_field">Driver Type:</string>
+    <string name="under18_field">List the names of household members under the age of 18 (separated by commas):</string>
+    <string name="names_nonLicensed_field">List the names of non-licensed residents (separated by commas):</string>
+    <string name="continuebtn">Continue</string>
+    <string name="enter_date_hint">Enter Date</string>
+    <string name="male_rbtn">Male</string>
+    <string name="female_rbtn">Female</string>
+    <string name="married_rbtn">Married</string>
+    <string name="divorced_rbtn">Divorced</string>
+    <string name="widowed_rbtn">Widowed</string>
+    <string name="single_rbtn">Single</string>
+    <string name="state">State</string>
+    <string name="driver_type">Driver Type</string>
+    <string name="apply_btn">Apply</string>
+    <string name="prior_insurance_company_field">Name of prior insurance company:</string>
+    <string name="insurance_company_name_hint">Insurance Company Name</string>
+    <string name="previous_claims_field">Have you or any licensed drivers in your household, or any operators of your vehicles had any accidents, violations, or filed any injury claims during the past five years?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="add_vehicle_btn">Add Vehicle</string>
+    <string name="model_year_label">Model Year</string>
+    <string name="make_label">Make</string>
+    <string name="model_label">Model</string>
+    <string name="vin_label">VIN #</string>
+    <string name="year_label">Year</string>
+    <string name="make_hint">Enter the vehicle\'s make</string>
+    <string name="model_hint">Enter the vehicle\'s model</string>
+    <string name="year_hint">Enter the vehicle\'s model year</string>
+    <string name="vin_hint">Enter the vehicle\'s VIN</string>
+    <string name="cancel">Cancel</string>
+    <string name="save">Save</string>
+    <string name="liability_coverage">Liability Coverage</string>
+    <string name="liability_def">Liability insurance covers you in the event you are in a covered car accident and it is determined the accident is a result of your actions</string>
+    <string name="collision_coverage">Collision Coverage</string>
+    <string name="Collision_def">If there is a covered accident, collision coverage will pay for the repairs to your car. If your car is totaled (where the cost to repair it exceeds the value of the vehicle) in an accident, collision coverage will pay the value of your car. .</string>
+    <string name="comprehensive_coverage">Comprehensive Coverage</string>
+    <string name="Comprehensive_def">Comprehensive insurance can provide an extra level of coverage in the instance of an accident involving another vehicle. It may help pay for damage to your car due to incidents besides collisions, including vandalism, certain weather events and accidents with animals.</string>
+    <string name="view_policies_btn">View Policies</string>
+    <string name="manage_policies_btn">Manage Policies</string>
+    <string name="street_address_field">Street Address</string>
+    <string name="street_address_hint">Street Address</string>
+    <string name="state_field">State</string>
+    <string name="zip_code_field">Zip Code</string>
+    <string name="zip_code_hint">Zip Code</string>
+    <string name="email_field">Email</string>
+    <string name="email_hint">Email</string>
+    <string name="phone_num_field">Phone Number</string>
+    <string name="submit">Submit</string>
+    <string name="driver_label">Driver</string>
+    <string name="driver_hint">Enter driver\'s name</string>
+    <string name="take_picture_btn">Take Picture</string>
+    <string name="take_video_btn">Take Video</string>
+    <string name="date_of_accident">Date of Accident:</string>
+    <string name="time_of_accident">Time of accident:</string>
+    <string name="describe_accident">Use the space below to describe the accident.</string>
+    <string name="submit_claim_btn">Submit a Claim</string>
+    <string name="enter_time_hint">Enter time</string>
+    <string name="monitor_driving">Monitor Driving</string>
+    <string name="begin_drive_btn">Begin Drive</string>
+    <string name="end_drive_btn">End Drive</string>
+    <string name="startDriveMessage">To start monitoring your drive, click begin.</string>
+    <string name="drivingMonitorMessage">Your driving is being monitored.</string>
+    <string name="view_insurance_card">View Insurance Card</string>
+    <string name="help_btn">I need help!</string>
+    <string name="fine_btn">I am fine</string>
+    <string name="emergency_msg">We detected a sudden change in speed. Are you in need of emergency services?</string>
+    <string name="city_hint">City</string>
+    <string name="city">City:</string>
+
+
+    <string-array name="state_codes">
+        <item>AL</item>
+        <item>AK</item>
+        <item>AZ</item>
+        <item>AR</item>
+        <item>CA</item>
+        <item>CO</item>
+        <item>CT</item>
+        <item>DE</item>
+        <item>DC</item>
+        <item>FL</item>
+        <item>GA</item>
+        <item>HI</item>
+        <item>ID</item>
+        <item>IL</item>
+        <item>IN</item>
+        <item>IA</item>
+        <item>KS</item>
+        <item>KY</item>
+        <item>LA</item>
+        <item>ME</item>
+        <item>MD</item>
+        <item>MA</item>
+        <item>MI</item>
+        <item>MN</item>
+        <item>MS</item>
+        <item>MO</item>
+        <item>MT</item>
+        <item>NE</item>
+        <item>NV</item>
+        <item>NH</item>
+        <item>NJ</item>
+        <item>NM</item>
+        <item>NY</item>
+        <item>NC</item>
+        <item>ND</item>
+        <item>OH</item>
+        <item>OK</item>
+        <item>OR</item>
+        <item>PA</item>
+        <item>RI</item>
+        <item>SC</item>
+        <item>SD</item>
+        <item>TN</item>
+        <item>TX</item>
+        <item>UT</item>
+        <item>VT</item>
+        <item>VA</item>
+        <item>WA</item>
+        <item>WV</item>
+        <item>WI</item>
+        <item>WY</item>
+    </string-array>
+
+    <string-array name="driver_types">
+        <item>M - Motorcycle</item>
+        <item>C - Car</item>
+        <item>B - Buses/RV</item>
+        <item>A - B and C</item>
+        <item>C CDL - Delivery Driver</item>
+        <item>B CDL - Commercial Vehicles</item>
+        <item>A CDL - All Categories</item>
+    </string-array>
+</resources>

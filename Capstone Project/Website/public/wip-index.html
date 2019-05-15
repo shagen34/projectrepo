@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Wizard Insurance</title>
+    <link rel="stylesheet" href ="css/materialize.css">
+    <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase-database.js"></script>
+    <script src="js/materialize.js"></script>
+    <script src="js/firebaseIntializer.js"></script>
+    <style>
+        #title {
+            border: 10px white;
+        }
+    </style>
+    
+</head>
+<body style="background: lightblue;">
+<nav class ="indigo" style="margin-bottom: 0px;">
+    <div style="padding-left: 1%" class = "nav-wrapper">
+        <a href="#" class ="brand-logo">Wizard Insurance</a>
+        <ul id = "nav-mobile" class = "right hide-on-med-and-down">
+            <li><!-- Links to other parts of the website here --></li>
+            <li style ="align-content: center">
+                <h5 style="margin-right: 10px" id = "username"><b>Username:     </b></h5>
+            </li>
+            <li>
+                <input type ="email" id="email"/>
+            </li>
+            <li>
+                <h5 style="margin-right: 10px" id = "password"><b>Password:    </b></h5>
+            </li>
+            <li>
+                <input type="password" id ="pass"/>
+            </li>
+            <li>
+                <button id = "login" onclick="login()">Login</button>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="row" id="credCanvas">
+    <div class="col s12 center-align " id="title">
+        <h3 id="portal">Employee Portal</h3>
+    </div>
+    <div class ="input-field col s2 offset-s5 center-align">
+        <input placeholder="Username" id="user" type="text" class="validate">
+        <label for="user">Username</label>
+    </div>
+    <div class ="input-field col s2 offset-s5 center-align">
+            <input placeholder="Password" id="password" type="text" class="validate">
+            <label for="user">Password</label>
+    </div>
+</div>
+
+
+</body>
+</html>
